@@ -15,6 +15,24 @@ Output: The emp id of the employee is 123
 The total earning is 1950.0
 
 */
+
+
+
+
+import Marketing.Sales;
+import java.util.Scanner;
 public class Lab6_5 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the employee id and employee name: ");
+        int empid = sc.nextInt();
+        sc.nextLine(); // to consume the newline character
+        String ename = sc.nextLine();
+        System.out.print("Enter the basic salary: ");
+        double basic = sc.nextDouble();
+        Sales s = new Sales(empid, ename);
+        System.out.println("The emp id of the employee is " + empid);
+        System.out.println("The total earning is " + s.earnings(basic));
+    }
     
 }
